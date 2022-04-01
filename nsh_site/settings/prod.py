@@ -10,5 +10,8 @@ SECRET_KEY = config('SECRET_KEY')
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    'nsh-blog.herokuapp.com',
+    'nshoa99-blog.herokuapp.com',
 ]
+
+django_on_heroku.settings(locals, staticfiles=False)
+del DATABASES['default']['OPTIONS']['sslmode']
